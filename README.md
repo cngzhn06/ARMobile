@@ -4,7 +4,7 @@ Bebek ve çocukların uçakta keyifli vakit geçirmesi için yapılması planlan
 
 ### Hafta 1 
 -----
-
+Trello panosu ve github reposu oluşturuldu. => https://trello.com/b/uORZZQrZ/ar 
 -----
 ### Hafta 2
 -----
