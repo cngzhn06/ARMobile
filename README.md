@@ -32,6 +32,3 @@ Gereksinim analizi yapıldı
 ### Hafta 7
 -----
 
-
-### Hafta 8
------
