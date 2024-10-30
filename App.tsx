@@ -1,33 +1,18 @@
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  View,
-} from 'react-native';
+import * as React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import HomeScreen from './src/screen/HomeScreen';
 
+const Stack = createStackNavigator();
 
-function App(): React.JSX.Element {
-
-
+const App: React.FC = () => {
   return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        <Text>
-          ARTIRILMIŞ GERÇEKLİK UYGULAMASI
-        </Text>
-      </View>
-    </SafeAreaView>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Home">
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex:1,
-    justifyContent:'center',
-    alignItems:'center',
-    
-  },
-});
+};
 
 export default App;

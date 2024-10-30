@@ -23,6 +23,9 @@ target 'Mobile' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
+  # Add DoubleConversion pod here
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+
   target 'MobileTests' do
     inherit! :complete
     # Pods for testing
