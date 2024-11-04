@@ -1,6 +1,7 @@
 import {View, SafeAreaView, StyleSheet, Dimensions, Text} from 'react-native';
 import React from 'react';
 import Card from '../components/Card';
+import {useNavigation} from '@react-navigation/native';
 
 const {width} = Dimensions.get('window');
 const cardWidth = width / 3 - 16;
@@ -8,39 +9,38 @@ const cardWidth = width / 3 - 16;
 const gameData = [
   {
     title: 'Sudoku',
-    imageUrl:
-      'https://i.pinimg.com/originals/13/bc/2a/13bc2abd67236e9454001ebe2e59731b.png',
-    navigate: '',
+    imageUrl: 'https://via.placeholder.com/150',
+    navigate: 'Sudoku',
   },
   {
     title: 'Farklı Olan',
-    imageUrl:
-      'https://melekbalci93.wordpress.com/wp-content/uploads/2013/05/frk1.jpg',
+    imageUrl: 'https://via.placeholder.com/150',
+    navigate: 'Different',
   },
   {
     title: 'Piramit',
-    imageUrl:
-      'https://egitimevreni.com/wp-content/uploads/2015/05/toplama-islemleri-piramidi.jpg',
-    navigate: '',
+    imageUrl: 'https://via.placeholder.com/150',
+    navigate: 'Pyramid',
   },
   {
     title: 'Çok Fazla Kare',
     imageUrl: 'https://via.placeholder.com/150',
-    navigate: '',
+    navigate: 'MultiSquare',
   },
   {
     title: 'Yeniden Düzenle',
     imageUrl: 'https://via.placeholder.com/150',
-    navigate: '',
+    navigate: 'Rerange',
   },
   {
     title: 'Hepsini Yakala',
     imageUrl: 'https://via.placeholder.com/150',
-    navigate: '',
+    navigate: 'CatchAll',
   },
 ];
 
 export default function HomeScreen() {
+  const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -51,7 +51,12 @@ export default function HomeScreen() {
       </View>
       <View style={styles.row}>
         {gameData.map((game, index) => (
-          <Card key={index} title={game.title} imageUrl={game.imageUrl} />
+          <Card
+            key={index}
+            title={game.title}
+            imageUrl={game.imageUrl}
+            onPress={() => navigation.navigate(game.navigate)}
+          />
         ))}
       </View>
     </SafeAreaView>

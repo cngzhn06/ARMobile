@@ -1,17 +1,18 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 
 interface CardProps {
   title: string;
   imageUrl: string;
+  onPress: () => void;  
 }
 
-export default function Card({ title, imageUrl }: CardProps) {
+export default function Card({ title, imageUrl, onPress }: CardProps) {
   return (
-    <View style={styles.card}>
+    <TouchableOpacity onPress={onPress} style={styles.card}>
       <Image source={{ uri: imageUrl }} style={styles.image} />
       <Text style={styles.title}>{title}</Text>
-    </View>
+    </TouchableOpacity>
   );
 }
 
