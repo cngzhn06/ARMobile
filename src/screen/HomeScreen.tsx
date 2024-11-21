@@ -9,27 +9,27 @@ const cardWidth = width / 2 - 24; // İki kart yan yana olacak şekilde
 const gameData = [
   {
     title: 'Sudoku',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../img/sudoku.png'),
     navigate: 'Sudoku',
   },
   {
     title: 'Farklı Olan',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../img/differentcolor.png'),
     navigate: 'Different',
   },
   {
     title: 'Piramit',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../img/pyramid.png'),
     navigate: 'Pyramid',
   },
   {
     title: 'Çok Fazla Kare',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../img/multisquare.png'),
     navigate: 'MultiSquare',
   },
   {
     title: 'Hafıza Kutuları',
-    imageUrl: 'https://via.placeholder.com/150',
+    imageUrl: require('../img/kutu.png'),
     navigate: 'MemoryBoxes',
   },
 ];
