@@ -7,7 +7,7 @@ import CatchAll from './src/games/CatchAll';
 import Different from './src/games/Different';
 import MultiSquare from './src/games/MultiSquare';
 import Pyramid from './src/games/Pyramid';
-import Rerange from './src/games/Rerange';
+import MemoryBoxes from './src/games/MemoryBoxes';
 
 const Stack = createStackNavigator();
 
@@ -21,7 +21,7 @@ const App: React.FC = () => {
         <Stack.Screen name="Pyramid" component={Pyramid} />
         <Stack.Screen name="CatchAll" component={CatchAll} />
         <Stack.Screen name="MultiSquare" component={MultiSquare} />
-        <Stack.Screen name="Rerange" component={Rerange} />
+        <Stack.Screen name="MemoryBoxes" component={MemoryBoxes} />
 
       </Stack.Navigator>
     </NavigationContainer>

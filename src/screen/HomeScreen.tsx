@@ -1,10 +1,10 @@
-import {View, SafeAreaView, StyleSheet, Dimensions, Text} from 'react-native';
+import { View, SafeAreaView, StyleSheet, Dimensions, Text } from 'react-native';
 import React from 'react';
 import Card from '../components/Card';
-import {useNavigation} from '@react-navigation/native';
+import { useNavigation } from '@react-navigation/native';
 
-const {width} = Dimensions.get('window');
-const cardWidth = width / 3 - 16;
+const { width } = Dimensions.get('window');
+const cardWidth = width / 2 - 24; // İki kart yan yana olacak şekilde
 
 const gameData = [
   {
@@ -28,14 +28,9 @@ const gameData = [
     navigate: 'MultiSquare',
   },
   {
-    title: 'Yeniden Düzenle',
+    title: 'Hafıza Kutuları',
     imageUrl: 'https://via.placeholder.com/150',
-    navigate: 'Rerange',
-  },
-  {
-    title: 'Hepsini Yakala',
-    imageUrl: 'https://via.placeholder.com/150',
-    navigate: 'CatchAll',
+    navigate: 'MemoryBoxes',
   },
 ];
 
@@ -43,19 +38,18 @@ export default function HomeScreen() {
   const navigation = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
-      <View>
-        <Text>
-          Matematikçiler problemleri çözerken MANTIKLI,SİSTEMLİ ve YARATICI
-          olmalıdır.
-        </Text>
-      </View>
-      <View style={styles.row}>
+      <Text style={styles.headerText}>
+        Matematikçiler problemleri çözerken MANTIKLI, SİSTEMLİ ve YARATICI
+        olmalıdır.
+      </Text>
+      <View style={styles.grid}>
         {gameData.map((game, index) => (
           <Card
             key={index}
             title={game.title}
             imageUrl={game.imageUrl}
             onPress={() => navigation.navigate(game.navigate)}
+            style={{ width: cardWidth }}
           />
         ))}
       </View>
@@ -66,12 +60,19 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
+    backgroundColor: '#f7f7f7',
+    paddingHorizontal: 16,
+    paddingTop: 16,
   },
-  row: {
+  headerText: {
+    fontSize: 18,
+    textAlign: 'center',
+    marginBottom: 24,
+    color: '#333',
+  },
+  grid: {
     flexDirection: 'row',
-    flexWrap: 'wrap', // Kartların iki satıra yayılmasını sağlamak için
-    marginLeft: width * 0.03,
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
   },
 });
