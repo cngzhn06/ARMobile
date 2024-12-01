@@ -4,7 +4,8 @@ Bebek ve çocukların uçakta keyifli vakit geçirmesi için yapılması planlan
 
 ### Hafta 1 
 -----
-Trello panosu ve github reposu oluşturuldu. => https://trello.com/b/uORZZQrZ/ar 
+Trello panosu oluşturuldu => https://trello.com/b/uORZZQrZ/deepfly
+Github repoları oluşturuldu => https://github.com/cngzhn06/DeepFly-Web § https://github.com/cngzhn06/DeepFly-Mobile
 
 ### Hafta 2
 -----
@@ -14,21 +15,28 @@ Sosyal medya hesabı açıldı. => https://www.instagram.com/deepflyforar
 ### Hafta 3
 -----
 Swot analizi yapıldı
-[AR Swot.pdf](https://github.com/user-attachments/files/17578552/AR.Swot.pdf)
+[AR Swot.pdf](https://github.com/user-attachments/files/17969348/AR.Swot.pdf)
+
 
 ### Hafta 4 
 -----
 Gereksinim analizi yapıldı
-[AR Gereksinim.pdf](https://github.com/user-attachments/files/17578562/AR.Gereksinim.pdf)
+[AR Gereksinim.pdf](https://github.com/user-attachments/files/17969349/AR.Gereksinim.pdf)
+
 
 ### Hafta 5
 -----
-
+Tüm diyagramlar ve 
+[screen.zip](https://github.com/user-attachments/files/17969357/screen.zip)
+[diyagram.zip](https://github.com/user-attachments/files/17969377/diyagram.zip)
 
 ### Hafta 6
 -----
+Kodlama
+https://github.com/cngzhn06/DeepFly-Mobile
 
 
 ### Hafta 7
 -----
+Testler
 
